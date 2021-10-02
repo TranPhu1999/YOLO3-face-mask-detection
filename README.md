@@ -7,4 +7,10 @@ Face wearing mask detection
 `conda activate yolov3-cpu`
 # Run detector:
 `python app.py`
+# Reference:
+- Yolo: https://pjreddie.com/darknet/yolo/
+- Flask: https://flask.palletsprojects.com/en/1.1.x/quickstart/?fbclid=IwAR1Kgoodj-z5PDX_YSMSB2kkm3uX6LjU6rZsUNDdkLAV_-nvuq1-vryL_Jo
+- Train Yolo: https://miai.vn/2019/08/09/yolo-series-2-cach-train-yolo-de-detect-cac-object-dac-thu/
+ https://www.youtube.com/watch?v=_UqmgHKdntU&t=674s
+- Front-end: https://speckyboy.com/custom-file-upload-fields/?fbclid=IwAR1m_7rOddeyapKW1eHkA7XZuZVsL5fmwAhR7uESn8taYHxdpDtk0T8pbVQ
 
