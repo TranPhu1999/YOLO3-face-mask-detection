@@ -3,8 +3,8 @@ In this project, I:
 - Train a Yolov3 model to detect Face mask wearing (Tensorflow, OpenCV, Numpy)
 - Build a Flask API that receive image and send image result to a web interface (flask)
 - Build a web interface that Upload image from user then send it to Flask API, receive and display the output (HTML, CSS, JavaSript)
-|![Input](https://github.com/TranPhu1999/TranDucPhu_porfolio/blob/main/images/download.png) | ![Output](https://github.com/TranPhu1999/TranDucPhu_porfolio/blob/main/images/maksssksksss0.png)|
-Face wearing mask detection
+![Input](https://github.com/TranPhu1999/TranDucPhu_porfolio/blob/main/images/download.png)
+![Output](https://github.com/TranPhu1999/TranDucPhu_porfolio/blob/main/images/maksssksksss0.png)
 - Training data: https://drive.google.com/drive/folders/1uokTkVbIpzHqevw3_211jj6iwUmr1XkS?usp=sharing
 - Weights: https://drive.google.com/file/d/1gLYLXFgY4j2qpC10NqUdBaP72i12NnBS/view?usp=sharing
 # Set up enviroment: 
