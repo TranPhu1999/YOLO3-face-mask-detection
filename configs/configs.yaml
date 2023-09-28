@@ -1,0 +1,4 @@
+model_path: "models/face_mask.pt"
+devices_id: "cpu"
+confidence_threshold: 0.25
+iou_threshold: 0.7

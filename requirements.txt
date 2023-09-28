@@ -1,8 +1,14 @@
-tensorflow==2.0.1
-numpy
-opencv-python==4.1.1.26
-lxml
-tqdm
-flask
-seaborn
-pillow
+# tensorflow==2.0.1
+# numpy
+# opencv-python==4.1.1.26
+# lxml
+# tqdm
+# flask
+# seaborn
+# pillow
+
+torch==2.0.1 
+torchvision==0.15.2 
+fastapi[all]==0.103.1
+ultralytics==8.0.188
+pillow==10.0.1

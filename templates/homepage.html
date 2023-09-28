@@ -33,12 +33,7 @@
 <div class="column">
 <div class="file-result">
 <div class="row">
-<div class="column">
   <button class="file-result-pretrained-btn" type="button" onclick="submit_file('pretrained');" >Pretrained model</button></div>
-<div class="column">
-  <button class="file-result-custom-btn" type="button" onclick="submit_file('custom');">Custom model</button>
-</div>
-</div>
   <div class="image-result-wrap">
     <div class="anounce-text">
     <h3>Your result image will be display here</h3>  
@@ -53,10 +48,9 @@
 </div>
 
 <article style = "position: middle;"> 
-	<h3>YOLOv3: An Incremental Improvement</h3>
-	<p>Author: Redmon, Joseph and Farhadi, Ali</p>
-	<p>Journal : arXiv</p>
-	<p>Year: 2018</p>
+	<h3>YOLOv8: Face mask detection</h3>
+	<p>Author: Tran Duc Phu </p>
+	<p>Year: 2021</p>
 </article>
 
 
@@ -103,21 +97,23 @@
 	});
 	
 
-	function submit_file(model) {
+	function submit_file() {
 		var images = window.images;
-		req = $.ajax({
-		     url:'/Upload',
-		     type: 'POST',
-		     data: {data: images, name: window.images_name, model: model}
-		     });  
-		$('.anounce-text').hide()  	    		   
-    		$('.preload-container').show();                
-		req.done(function(result) {			
-			$('.preload-container').delay(1000).fadeOut('fast');
-			$('.image-result-wrap').hide();	      
-			$('.file-result-image').attr('src', result.detected);
-			$('.file-result-content').show();
-		});
+		if (images){
+			req = $.ajax({
+				url:'/predict',
+				type: 'POST',
+				data: {data: images, name: window.images_name}
+				});  
+			$('.anounce-text').hide()  	    		   
+				$('.preload-container').show();                
+			req.done(function(result) {			
+				$('.preload-container').delay(1000).fadeOut('fast');
+				$('.image-result-wrap').hide();	      
+				$('.file-result-image').attr('src', result.detected);
+				$('.file-result-content').show();
+			});
+		}
 	}
 
 
@@ -182,7 +178,7 @@
 	  transition: all .2s ease;
 	}
 
-	.file-result-custom-btn {
+	/* .file-result-custom-btn {
 	  width:100%;
 	  margin: 0;
 	  color: #fff;
@@ -207,7 +203,7 @@
 	.file-result-custom-btn:active {
 	  border: 0;
 	  transition: all .2s ease;
-	}
+	} */
 
 	.file-result-content {
 	  display: none;
@@ -225,9 +221,9 @@
             display: none;
         }
 
-	.submit-to-custom-model{
+	/* .submit-to-custom-model{
             display: none;
-        }
+        } */
 
 	.txt{
             display: none;
